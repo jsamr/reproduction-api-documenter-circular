@@ -1,0 +1,17 @@
+{
+  "name": "reproduction-api-documenter-circular",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn build:defs && yarn build:doc",
+    "build:defs": "api-extractor run --local --verbose",
+    "build:doc": "api-documenter markdown --input-folder temp --output-folder docs"
+  },
+  "devDependencies": {
+    "@microsoft/api-documenter": "^7.8.36",
+    "@microsoft/api-extractor": "^7.9.11",
+    "typescript": "3.9.7"
+  }
+}
